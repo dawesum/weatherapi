@@ -23,7 +23,9 @@ stages:
     - task: Docker@2
       inputs:
         containerRegistry: 'DawesumDockerHub'
+        repository: 'dawesum/weatherapi'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         tags: |
           $(tag)
+    
